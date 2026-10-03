@@ -1,0 +1,7 @@
+node_modules
+.runtime
+dist
+apps/web/dist
+apps/web/public/assets
+licenses
+pnpm-lock.yaml

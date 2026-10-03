@@ -1,0 +1,5 @@
+source;external_id;metric;start;end;timezone;value;unit
+synthetic-watch;sleep-1;sleep;2026-10-24T23:00:00;2026-10-25T07:00:00;Europe/Warsaw;7,5;h
+synthetic-watch;steps-1;steps;2026-10-24T00:00:00;2026-10-25T00:00:00;Europe/Warsaw;4 200;steps
+synthetic-watch;steps-1;steps;2026-10-24T00:00:00;2026-10-25T00:00:00;Europe/Warsaw;4 200;steps
+synthetic-phone;steps-2;steps;2026-10-24T00:00:00;2026-10-25T00:00:00;Europe/Warsaw;3 900;steps

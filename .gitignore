@@ -1,0 +1,17 @@
+node_modules/
+.git/
+.env
+.env.*
+.private/
+.runtime/
+dist/
+apps/web/dist/
+apps/web/public/assets/
+test-results/
+playwright-report/
+docs/evidence/
+fixtures/imports/browser-verification.json
+*.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
