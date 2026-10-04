@@ -1,1 +1,18 @@
-{"name":"Plan B. Plan, który można zmienić","short_name":"Plan B","lang":"pl","start_url":"/","scope":"/","theme_color":"#17635b","background_color":"#f7f7f3","display":"standalone","icons":[{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}
+{
+  "name": "Plan B. Plan, który można zmienić",
+  "short_name": "Plan B",
+  "lang": "pl",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#315fd1",
+  "background_color": "#f5f7fb",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

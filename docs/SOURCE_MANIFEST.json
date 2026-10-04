@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T06:47:48.890966+00:00",
+  "generatedAt": "2026-10-04T07:16:34.286818+00:00",
   "manifestExcludesItself": true,
   "fileCountExcludingManifest": 109,
-  "bytesExcludingManifest": 2176155,
+  "bytesExcludingManifest": 2177111,
   "files": [
     {
       "path": ".dockerignore",
@@ -122,18 +122,18 @@
     },
     {
       "path": "apps/web/index.html",
-      "bytes": 710,
-      "sha256": "c219972973e9143034999650357be2f9b7c89a01a4fb96cf3019d8d96ed313b0"
+      "bytes": 784,
+      "sha256": "8e503c1f1b85eb3bc569f43871cf683c534928a6bd8e9d11ae700b7e9c4638b2"
     },
     {
       "path": "apps/web/public/icon.svg",
       "bytes": 279,
-      "sha256": "a24cd288546d031103408af6b0e485ed502ce91489f9831382ca0a3dd11c3854"
+      "sha256": "338f717107d6efdb1f60daa1f93f2106dffa6dd56555f5f8f859ea7d9245d121"
     },
     {
       "path": "apps/web/public/manifest.webmanifest",
-      "bytes": 269,
-      "sha256": "760ad2202dd293d094622321f562d02502fbfe2c9f4b05869afc3bd921f5938f"
+      "bytes": 351,
+      "sha256": "6ee45a9ac103d1a2407585fffc6c2a971008a81b35fcb99739737ced706cc110"
     },
     {
       "path": "apps/web/src/AgreementForm.tsx",
@@ -218,12 +218,12 @@
     {
       "path": "apps/web/src/report.tsx",
       "bytes": 5143,
-      "sha256": "c3222f1d8972a0380cfa633370ea7fc71722759795b93e69f5ad299ebfb062c4"
+      "sha256": "af452ea230d3e7301036972ee9cccb1a1f0297dc8b9a4e786e1abc1ed69d936d"
     },
     {
       "path": "apps/web/src/styles.css",
-      "bytes": 24017,
-      "sha256": "30c3d3d4e2453302baad24a4a7c3e4c4f44fef025a060221c09968f61370c2f4"
+      "bytes": 24817,
+      "sha256": "978a026c62ee1d211c225c13084824c6af2798d93497b10274081e84eee451f4"
     },
     {
       "path": "apps/web/src/utils.ts",

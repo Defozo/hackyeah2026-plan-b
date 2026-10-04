@@ -15,11 +15,11 @@ Font.register({
   src: "/assets/fonts/NotoSans-Regular.ttf",
 });
 const styles = StyleSheet.create({
-  page: { padding: 40, fontSize: 10, fontFamily: "NotoSans", color: "#183d37" },
+  page: { padding: 40, fontSize: 10, fontFamily: "NotoSans", color: "#182a46" },
   title: { fontSize: 24, marginBottom: 12 },
   section: { marginTop: 18, marginBottom: 8, fontSize: 14 },
   row: { marginBottom: 9 },
-  small: { fontSize: 8, color: "#50625e" },
+  small: { fontSize: 8, color: "#51627c" },
   footer: {
     position: "absolute",
     bottom: 20,
@@ -109,7 +109,7 @@ const escape = (value: string) =>
       ]!,
   );
 export function buildHtml(data: AppData, p: CarePacket) {
-  return `<!doctype html><html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Karta konsultacji | Plan B</title><style>body{font:18px/1.6 system-ui;max-width:760px;margin:40px auto;padding:20px;color:#183d37}small{display:block;color:#50625e}li{margin-bottom:18px}@media print{body{margin:0}}</style><main><h1>Przed wizytą. Moja karta konsultacji</h1>${p.synthetic ? "<p><strong>Dane syntetyczne. Materiał demonstracyjny.</strong></p>" : ""}<p>Okres: ${escape(fmt(p.start))} do ${escape(fmt(p.end))}</p><h2>Cel rozmowy</h2><p>${escape(p.goal)}</p><h2>Wybrane fakty</h2><ul>${packetLines(
+  return `<!doctype html><html lang="pl"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Karta konsultacji | Plan B</title><style>body{font:18px/1.6 system-ui;max-width:760px;margin:40px auto;padding:20px;color:#182a46}small{display:block;color:#51627c}li{margin-bottom:18px}@media print{body{margin:0}}</style><main><h1>Przed wizytą. Moja karta konsultacji</h1>${p.synthetic ? "<p><strong>Dane syntetyczne. Materiał demonstracyjny.</strong></p>" : ""}<p>Okres: ${escape(fmt(p.start))} do ${escape(fmt(p.end))}</p><h2>Cel rozmowy</h2><p>${escape(p.goal)}</p><h2>Wybrane fakty</h2><ul>${packetLines(
     data,
     p,
   )
