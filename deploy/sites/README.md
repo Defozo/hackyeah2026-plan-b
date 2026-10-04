@@ -22,6 +22,7 @@ i nie wymagają dodawania Drizzle do zależności aplikacji.
 
 Pakiet źródeł nie zawiera filmu ani prezentacji. Katalog `/materialy/` z oryginalnego wdrożenia nie jest
 odtwarzany; [aktualne materiały](https://plan-b-defozo.defozo.chatgpt.site/materialy/) są dostępne osobno.
-Trasa filmu w oryginalnym Workerze wymaga dodatkowego zasobu `_planb/demo.bin`, jeśli operator zdecyduje się
-samodzielnie hostować te materiały. Własny pakiet nie kopiuje ich automatycznie.
+Jeśli operator zdecyduje się samodzielnie hostować materiały, trasa `/materialy/Plan-B-demo.mp4` wymaga
+zasobu `_planb/demo.bin`, a `/materialy/Plan-B-song-2026-10-04-d82a354873b2.mp4` wymaga
+`_planb/song-2026-10-04-d82a354873b2.bin`. Własny pakiet nie kopiuje ich automatycznie.
 Testy Workera używają testowego, publicznego sekretu wyłącznie w pamięci i lokalnej bazy SQLite.

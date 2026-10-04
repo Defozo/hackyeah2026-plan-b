@@ -246,3 +246,34 @@ test("public MP4 supports full, single, suffix, open ranges and HEAD without cha
   assert.equal(await stale.text(), "synthetic-asset");
   await s.close();
 });
+
+test("song and narration resolve distinct fixed assets and ignore asset query parameters", async () => {
+  const assets = {
+    "/_planb/demo.bin": "narration-video",
+    "/_planb/song-2026-10-04-d82a354873b2.bin": "song-video",
+  };
+  const requested = [];
+  const env = { ASSETS: { fetch: async (request) => {
+    const path = new URL(request.url).pathname;
+    requested.push(path);
+    return Object.hasOwn(assets, path)
+      ? new Response(assets[path])
+      : new Response("missing", { status: 404 });
+  } } };
+  for (const [path, expected, backing] of [
+    ["/materialy/Plan-B-demo.mp4", "narration-video", "/_planb/demo.bin"],
+    ["/materialy/Plan-B-song-2026-10-04-d82a354873b2.mp4", "song-video", "/_planb/song-2026-10-04-d82a354873b2.bin"],
+  ]) {
+    const response = await worker.fetch(new Request(origin + path + "?asset=/_planb/shell.txt", {
+      headers: { Range: "bytes=0-3" },
+    }), env, {});
+    assert.equal(response.status, 206);
+    assert.equal(response.headers.get("content-type"), "video/mp4");
+    assert.equal(response.headers.get("content-range"), `bytes 0-3/${expected.length}`);
+    assert.equal(await response.text(), expected.slice(0, 4));
+    assert.equal(requested.at(-1), backing);
+  }
+  const unknown = await worker.fetch(new Request(origin + "/materialy/other.mp4"), env, {});
+  assert.equal(unknown.status, 404);
+  assert.equal(requested.at(-1), "/materialy/other.mp4");
+});

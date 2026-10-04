@@ -312,9 +312,14 @@ async function api(request, env, ctx, url) {
 }
 // Sites' static edge ignores byte ranges. Keep the immutable MP4 bytes in a
 // different asset path and serve the public URL here so browser seeking works.
-async function demoVideo(request, env) {
+const VIDEO_ASSETS = Object.freeze({
+  "/materialy/Plan-B-demo.mp4": "/_planb/demo.bin",
+  "/materialy/Plan-B-song-2026-10-04-d82a354873b2.mp4":
+    "/_planb/song-2026-10-04-d82a354873b2.bin",
+});
+async function demoVideo(request, env, assetPath) {
   const asset = await env.ASSETS.fetch(
-    new Request(new URL("/_planb/demo.bin", request.url)),
+    new Request(new URL(assetPath, request.url)),
   );
   if (!asset.ok) return asset;
   const bytes = await asset.arrayBuffer();
@@ -387,8 +392,8 @@ export default {
           return html;
         };
         response =
-          url.pathname === "/materialy/Plan-B-demo.mp4"
-            ? await demoVideo(request, env)
+          Object.hasOwn(VIDEO_ASSETS, url.pathname)
+            ? await demoVideo(request, env, VIDEO_ASSETS[url.pathname])
             : ["/", "/index.html"].includes(url.pathname)
               ? await shell()
               : await env.ASSETS.fetch(request);
