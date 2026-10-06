@@ -1,8 +1,8 @@
 # Plan B
 
-**Plan, który można zmienić.** Plan B pomaga osobom pracującym w nieregularnych godzinach dopasować własną aktywność i odpoczynek do zmieniającego się dnia.
+Plan B pomaga osobom pracującym w nieregularnych godzinach dopasować własną aktywność i odpoczynek do zmieniającego się dnia. Gdy dyżur się przedłuży albo zmieni się dojazd, możesz sprawdzić, co nadal mieści się w grafiku i służy wybranemu przez Ciebie celowi.
 
-Trening z przygotowaniem i dojazdem zajmuje 50 minut, a po zmianie grafiku zostało 20. Podajesz przeszkodę i cel aktywności. Aplikacja porównuje do trzech wariantów, pokazuje zachowany cel i koszt zmiany, a Ty wybierasz działanie, odpoczynek lub odłożenie decyzji. Wybór i późniejszy rezultat zapisujesz oddzielnie.
+Trening z przygotowaniem i dojazdem zajmuje 50 minut, a po zmianie grafiku zostało 20. Podajesz przeszkodę i cel aktywności. Aplikacja porównuje do trzech wariantów, pokazuje zachowany cel i zakres zmiany, a Ty wybierasz działanie, odpoczynek lub odłożenie decyzji. Wybór i późniejszy rezultat zapisujesz oddzielnie, więc historia pokazuje zarówno zamiar, jak i to, co udało się zrobić.
 
 **DEFOZO SOFTWARE HOUSE · Michał Kiełtyka**, jedyny członek zespołu. Projekt kategorii SPORT & HEALTHCARE, etap New Idea.
 
@@ -12,15 +12,17 @@ Trening z przygotowaniem i dojazdem zajmuje 50 minut, a po zmianie grafiku zosta
 
 ## Jak działa
 
-- **Dzisiaj:** własna aktywność, cel, zmiana dnia i porównanie dostępnych wariantów. Zatwierdzenie zmiany należy do użytkownika.
+- **Dzisiaj:** porównanie wariantów z czasem przygotowania, dojazdem i dostępnością potrzebnych zasobów. Widzisz zachowany cel oraz zmiany godziny, długości, miejsca i towarzystwa. Zatwierdzenie zmiany należy do użytkownika.
 - **Mój tydzień:** grafik, dostępność, zasoby i chroniony odpoczynek. Plan można wyeksportować do ICS.
 - **Historia:** decyzje i rezultaty z 7 lub 28 dni, z informacją o źródłach danych.
 - **Przed wizytą:** wybór faktów i pytań do raportu PDF lub HTML oraz wyszukiwanie placówek w NFZ.
 - **Moje dane:** import ICS, CSV, FIT, PDF i zdjęć, lokalne OCR, przegląd odczytanych pól, zaszyfrowana kopia i odtworzenie danych.
 
+Silnik stosuje jawne reguły do podanego grafiku, chronionego odpoczynku i własnych wariantów aktywności. Przy odrzuconej propozycji podaje przyczynę, a wariant wymagający potwierdzenia dojazdu lub zasobu oznacza jako warunkowy. Dzięki temu możesz uzupełnić konkretną informację i ponownie sprawdzić plan. Obliczenia podstawowego planu działają lokalnie, bez modelu AI.
+
 Do rozpoczęcia wystarczy jedna własna aktywność. Nie potrzeba konta ani zegarka. Sejf jest szyfrowany i zapisany w przeglądarce. Po pobraniu zasobów plan, OCR i raport działają offline; wyszukiwanie NFZ wymaga sieci.
 
-Demo zawiera dane syntetyczne. Publiczne AI i transkrypcja są wyłączone. Plan B organizuje własny plan i informacje do rozmowy ze specjalistą; nie diagnozuje ani nie rezerwuje wizyt. Wyniki NFZ przedstawiają prognozowany czas udzielenia świadczenia.
+Demo zawiera dane syntetyczne. Podstawowy plan, OCR i raport korzystają z lokalnych danych; [opcjonalne funkcje AI i transkrypcji](AI_USAGE.md) mają osobną konfigurację i zgody. Plan B organizuje własny plan i informacje do rozmowy ze specjalistą; nie diagnozuje ani nie rezerwuje wizyt. Wyniki NFZ przedstawiają prognozowany czas udzielenia świadczenia.
 
 ## Uruchomienie lokalne
 
